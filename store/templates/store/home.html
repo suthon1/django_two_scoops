@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block title%}Home{% endblock %}
+
+{% block content %}
+
+<!-- <ul>
+    <li><a class="dropdown-item" href="">all</a></li>
+    {% for items in categories %}
+    <li>
+        <a class="dropdown-item" href="">{{ items.name|title }}</a>
+    </li>
+    {% endfor %}
+</ul> -->
+<ul>
+    {% for athlete in products %}
+        <li>{{ athlete.name }}</li>
+    {% empty %}
+        <li>Sorry, no athletes in this list.</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
